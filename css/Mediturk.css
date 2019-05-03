@@ -1,0 +1,697 @@
+/*-------------globale---------------------------*/
+body{
+    font-family: 'Cairo', sans-serif;
+    color:#fff;
+}
+.container{
+    width:90%;
+    margin:auto;
+}
+/*------------globale----------------------------*/
+.hamburger {
+  background-color:#fff;
+  text-align: center;
+  border-radius:50%;
+  cursor: pointer;
+  height: 45px;
+  width: 45px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger span {
+  margin-right: 7px;
+  text-align: center;
+  transition: all .33s ease;
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: #4D4FA0;
+}
+
+.hamburger span::before, .hamburger span::after {
+  transition: all .33s ease;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background-color: #4D4FA0;
+}
+
+.hamburger span::before {
+  top: -8px;
+  left: 0px;
+}
+
+.hamburger span::after {
+  bottom: -8px;
+  left: 0px;
+}
+
+.hamburger.activve span {
+  background-color: transparent;
+}
+
+.hamburger.activve span::before, .hamburger.activve span::after {
+  width: 32px;
+  left: 0;
+}
+
+.hamburger.activve span::before {
+  top: 0;
+  transform: rotate(45deg)
+}
+
+.hamburger.activve span::after {
+  bottom: 0;
+  transform: rotate(-45deg)
+}
+/*-----------------------header---------------------------*/
+#forumme{
+  display:none;
+}
+
+
+header{
+  position: relative;
+  overflow: hidden;
+  z-index:3;
+}
+#logo{
+    text-align: center;
+}
+#banniere_image{
+    overflow: hidden;
+    height: 850px;
+    background:url('../img/slider.png') no-repeat;
+    position: relative;
+    background-size: cover;
+}
+@media screen and (max-width: 900px){
+  .lang{
+    word-spacing:60px;
+  }
+  #banniere_image{
+    overflow: hidden;
+    height: 650px;
+    background:url('../img/iphonex.png') no-repeat;
+    position: relative;
+    background-size: cover;
+}
+.latest-technologies section > div {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin:auto;
+  width:90%
+}
+.latest-technologies section div .crop{
+  overflow: hidden;
+  color:#8D94B2;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  margin-top:30px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+}
+#banniere_description{
+    overflow: hidden;
+    position: absolute;
+    width:100%;
+    background-color:rgba(60, 82, 144,0.75);
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+.navbare{
+    display:flex;
+    justify-content: space-around;
+}
+/* The dropdown container */
+.dropdown {
+  margin-top: 10px;
+    
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    border:none;
+    font-size: 18px; 
+    border-radius: 24px;
+    outline: none;
+    color:#6060A8;
+    background-color:#fff;
+    font-family: inherit; /* Important for vertical align on mobile phones */ /* Important for vertical align on mobile phones */
+    display: flex;
+    justify-content:space-between;
+    width:180px;
+  }
+  .dropdown:hover .dropbtn {
+    background-color: #B6DAF2;
+    color:#fff;
+  }
+
+  /*-----------------*/
+  .nave-content{
+    text-align:right;
+    right:50px;
+    border-radius:20px 5px 45px 20px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width:80%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .nave-content a {
+    text-align:right;
+    float: none;
+    color:#4D4FA0;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .nave-active{
+    display: block;
+  }
+  .nave-content a:hover {
+    background-color: #B6DAF2;
+    border-radius:20px 5px 45px 20px;
+  }
+  /*------------------*/
+
+  /* Dropdown content (hidden by default) */
+.dropdown-content {
+    border-radius:20px 5px 45px 20px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #B6DAF2;
+    border-radius:20px 5px 45px 20px;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .flag{
+     align-self: center;
+  }
+  .descption{
+      display: flex;
+      flex-direction: column;
+  }
+  .descption h1 ,.descption p,#goforum{
+     align-self: flex-end;
+     text-align: right;
+  }
+  #goforum button {
+    cursor: pointer;
+    border:none;
+    font-size: 18px; 
+    outline: none;
+    color:#fff;
+    background-color:#9FD2F5;
+    margin-top: 20px; /* Important for vertical align on mobile phones */
+    padding: 10px;
+    width:150px;
+    border-radius:5px 45px 45px 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  }
+  #goforum button:hover {
+    transition: 0.6s ease;
+    box-shadow: 0px 8px 16px 0px rgba(215, 238, 5, 0.1);
+  }
+  #iconsocial-media{
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+    margin-bottom: 20px;
+  }
+  #iconsocial-media div{
+  display: inline-block;
+  background-color:#fff;
+  border-radius: 50%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  margin:40px 15px 15px 20px ;
+ }
+ #iconsocial-media div a {
+  font-size: 2em;
+  color: #9FD2F5;
+  display: table-cell;
+  vertical-align: middle; 
+  text-align: center;
+  text-decoration: none;
+  height: 50px;
+  width: 50px;   
+ }
+ #iconsocial-media div:hover{
+  transition: 0.6s ease;
+  background-color: #9FD2F5;
+  box-shadow: 0px 8px 16px 0px rgba(165, 164, 164, 0.7);
+ }
+ #iconsocial-media div a:hover {
+  transition: 0.6s ease;
+  font-size: 2em;
+  color: #fff;  
+ }
+/*-----------------------header---------------------------*/
+/*-----------------------------section 2----------------------------------*/
+#forume{
+  background:linear-gradient(#BBD5F0,#8DD1F5);
+  height: 700px;
+}
+#left{
+  position: relative;
+}
+#left img{
+  top:-5px;
+  position:absolute;
+  right:0px;
+  z-index:1;
+  height: 580px;
+}
+form{
+  margin: auto;
+  background-color: #fff;
+  border-radius:25px;
+  width:280px;
+  display:flex;
+  flex-direction:column;
+  color:#6060A8;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}
+form h3 {
+  text-align: center;
+  margin:10px 0px 20px 0px;
+
+}
+form input {
+  border:1px solid #A2D2F2;
+  color: #6060A8;
+  margin:10px 10px 20px 10px;
+  border-radius:5px;
+  padding:8px;
+}
+.towinput{
+  margin:10px 10px 20px 10px;
+  border-radius:5px;
+  border:1px solid #A2D2F2;
+  display:felx;
+  justify-content:space-between;
+  display:inline-block;
+}
+.towinput input{
+  margin:0px;
+  border-radius:5px;
+}
+#nbr{
+  border-radius:5px;
+  border:1px solid #6060A8;
+  margin:0px;
+  width:30%;
+}
+#forume .container{
+ position: relative;
+ z-index:100;
+}
+.abovesection{
+ 
+  padding-top:40px;
+}
+.newinput{
+  text-align: center;
+  float: right;
+  margin:0;
+  padding:8px;
+  word-spacing:80px;
+}
+.lang{
+  word-spacing:60px;
+}
+#pays{
+  border:1px solid #A2D2F2;
+  color: #6060A8;
+  font-size:0.6em;
+  border-radius:5px;
+  padding:8px;
+  text-align: center;
+  width:60%;
+}
+#datte{
+  border:none;
+  color: #6060A8;
+  font-size:0.8em;
+  border-radius:5px;
+  padding:8px;
+  text-align: center;
+  width:60%;
+}
+ .fas{
+  margin-left:5px;
+} 
+#name,#phone_nbr,#email{
+  color:#6DB7E8;
+  text-align: right;
+}
+#submit button {
+ 
+  text-align: center;
+  border:none;
+  font-size: 18px; 
+  outline: none;
+  color:#fff;
+  background:linear-gradient(#4D4FA0,#8889B5);
+  padding: 10px;
+  width:200px;
+  margin:auto;
+  border-radius:5px ;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+#submit{
+  margin-top:30px;
+  margin-bottom: 30px; 
+  display: flex;
+  justify-content: center;
+  
+}
+#submit button:hover {
+  transition: 0.6s ease;
+  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.8);
+}
+/*-----------------------------section 2----------------------------------*/
+/*---------------------------------------------  Satar Section N-3----------------------------------*/
+
+.latest-technologies{
+  background:linear-gradient(#BBD5F0,#8DD1F5);
+}
+.latest-technologies h2 {
+  margin-top:0;
+  padding-top:40px;
+  font-size:2.3em;
+  text-align:center;
+  color:#58628D;
+ 
+}
+.img_crop{
+  margin-right: 10px;
+  margin-left: 2px;
+}
+.crop div h3 {
+  margin-right:8px;
+  margin-top:0;
+  color:#58628D;
+}
+.crop div p {
+  margin-right:8px;
+ 
+}
+#group2{
+  height: 58px;
+  width: 58px;
+}
+/*----------------------------------End Section-3------------------------------------------------------*/
+
+/*----------------------------------start Section-4------------------------------------------------------*/
+#stomack .container{
+  text-align: center;
+  color:#4D4FA0;
+  margin:auto;
+  width:80%
+}
+.img_stomack{
+  margin-right:10px;
+  align-items: center;
+}
+/*----------------------------------End Section-4------------------------------------------------------*/
+
+
+/*----------------------------------start Section-5------------------------------------------------------*/
+#multp{
+  background:linear-gradient(#6060A8,rgb(109, 182, 221));
+  text-align: right;
+  margin-bottom:0;
+  overflow: hidden;
+}
+#multp .container h2{
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-right:20px;
+}
+.accordion {
+  margin-bottom:10px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: #fff;
+  color: #4D4FA0;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: right;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color:#6DB7E8;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  margin-bottom:10px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 0 18px;
+  background-color:#6060A8;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f103";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;  
+  font-size: 25px;
+  color: #58628D;
+  float: left;
+  margin-left: 5px;
+}
+
+.active:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f102"; /* Unicode character for "minus" sign (-) */
+  color: #fff;
+}
+/*----------------------------------End Section-5------------------------------------------------------*/
+footer{
+  margin-top: 0;
+  padding-bottom: 10px;
+  width:100%;
+  background-color:#6060A8;
+  text-align: center;
+  display: inline-block;
+}
+footer #goforum {
+  text-align: center;
+  display: inline-block;
+ 
+}
+.navdesktop{
+  display: none;
+}
+/*responsive*/
+@media screen and (min-width: 900px){
+  
+  #forumme{
+    align-self: flex-start;
+    background:none;
+    height: 600px;
+    width:40%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  #forumme .container{
+    position: relative;
+    z-index:100;
+   }
+   .addingforum .descption{
+     align-self: flex-end;
+     width:60%;
+     z-index:200;
+     margin-right:60px;
+   }
+   #forume{
+     display: none;
+   }
+   .addingforum{
+     display: flex;
+   }
+   .dropdown-content {
+     z-index: 102;
+   }
+   .cercle_nav{
+     display: none;
+   }
+   .nave-content{
+     display:block;
+     z-index:101;
+     margin-bottom:50px;
+   }
+   .nave-content a:hover {
+    z-index:101;
+  }
+  .navdesktop{
+    display: block;
+  }
+  .navdesktop a {
+   padding:5px;
+   text-decoration:none;
+   color:#fff;
+   margin-right:15px;
+  
+  }
+   .navdesktop a:hover{
+    text-decoration:underline;
+    color:#8DD1F5;
+    text-decoration: #8DD1F5;
+   }
+   .cropone,.croptow{
+    display:flex;
+    margin:auto;
+    width:90%
+  }
+  .latest-technologies section div .crop{
+    overflow: hidden;
+    color:#8D94B2;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top:30px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width:30%;
+  }
+  .croptow .crop{
+    overflow: hidden;
+    color:#8D94B2;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top:30px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width:45%;
+  }
+  .croptow,.resstom{
+    display: flex;
+    justify-content: center;
+    width:90%;
+    margin-top:20px;
+    margin-bottom:20px;
+    text-align: center;
+  }
+  .leftt h1,.leftt p,#goforum {
+    margin-left:20px;
+    align-self: flex-start;
+    text-align: left;
+  }
+  
+
+}
+.leftt h1,.leftt h3,.leftt p,#goforum {
+  margin-left:20px;
+  align-self: flex-start;
+  text-align: left;
+}
+.accordions:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f103";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;  
+  font-size: 25px;
+  color: #58628D;
+  float: right;
+  margin-left: 5px;
+}
+.panels {
+  margin-bottom:10px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 0 18px;
+  background-color:#6060A8;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordions {
+  margin-bottom:10px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: #fff;
+  color: #4D4FA0;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.active, .accordions:hover {
+  background-color:#6DB7E8;
+}
+#multpl{
+  background:linear-gradient(#6060A8,rgb(109, 182, 221));
+  text-align: left;
+  margin-bottom:0;
+  overflow: hidden;
+}
+#multpl .container h2{
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-right:20px;
+}
