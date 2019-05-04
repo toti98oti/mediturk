@@ -109,9 +109,10 @@ header{
   width:90%
 }
 .latest-technologies section div .crop{
+  padding-top:20px;
   overflow: hidden;
   color:#8D94B2;
-  text-align: right;
+  text-align: center;
   display: flex;
   justify-content: space-between;
   margin-top:30px;
@@ -352,6 +353,13 @@ form input {
   padding:8px;
   word-spacing:80px;
 }
+.newinputt{
+  text-align: center;
+  float: right;
+  margin:0;
+  padding:10px 8px 8px 0px;
+  font-size:0.8em;
+}
 .lang{
   word-spacing:60px;
 }
@@ -367,11 +375,11 @@ form input {
 #datte{
   border:none;
   color: #6060A8;
-  font-size:0.8em;
+  font-size:0.7em;
   border-radius:5px;
   padding:8px;
   text-align: center;
-  width:60%;
+  width:48%;
 }
  .fas{
   margin-left:5px;
@@ -410,14 +418,14 @@ form input {
 /*---------------------------------------------  Satar Section N-3----------------------------------*/
 
 .latest-technologies{
-  background:linear-gradient(#BBD5F0,#8DD1F5);
+  background:linear-gradient(to right, #4D4FA0,#8DD1F5);
 }
 .latest-technologies h2 {
   margin-top:0;
   padding-top:40px;
   font-size:2.3em;
   text-align:center;
-  color:#58628D;
+  color:#fff;
  
 }
 .img_crop{
@@ -449,6 +457,11 @@ form input {
 .img_stomack{
   margin-right:10px;
   align-items: center;
+}
+#stomack {
+  margin-top:60px;
+  margin-bottom:60px;
+
 }
 /*----------------------------------End Section-4------------------------------------------------------*/
 
@@ -594,9 +607,10 @@ footer #goforum {
     width:90%
   }
   .latest-technologies section div .crop{
+    padding-top:20px;
     overflow: hidden;
     color:#8D94B2;
-    text-align: right;
+    text-align: center;
     display: flex;
     justify-content: space-between;
     margin-left: 10px;
@@ -607,6 +621,9 @@ footer #goforum {
     border-radius: 15px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     width:30%;
+  }
+  .latest-technologies section div .crop div p{
+    line-height: 1.2em;
   }
   .croptow .crop{
     overflow: hidden;
@@ -623,13 +640,19 @@ footer #goforum {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     width:45%;
   }
-  .croptow,.resstom{
+  .croptow,.resstom {
     display: flex;
     justify-content: center;
     width:90%;
     margin-top:20px;
     margin-bottom:20px;
     text-align: center;
+  }
+  .resstom p{
+    line-height:1.5em;
+    margin-top:5px;
+    margin-bottom:5px;
+    text-align: right;
   }
   .leftt h1,.leftt p,#goforum {
     margin-left:20px;
@@ -643,6 +666,10 @@ footer #goforum {
   margin-left:20px;
   align-self: flex-start;
   text-align: left;
+}
+#goforum a,#me{
+  text-decoration: none;
+  color:#fff;
 }
 .accordions:after {
   font-family: "Font Awesome 5 Free";
@@ -694,4 +721,8 @@ footer #goforum {
   padding-top: 40px;
   padding-bottom: 40px;
   margin-right:20px;
+}
+#me{
+  text-decoration: none;
+  color:lightsalmon;
 }
