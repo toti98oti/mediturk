@@ -1,7 +1,20 @@
 /*-------------globale---------------------------*/
+
+@font-face {
+  font-family: 'DROID ARABIC NASKH';
+  src: url('../fonts/DroidNaskh-Regular.ttf');
+  src: url('../fonts/DroidNaskh-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/DroidNaskh-Regular.woff2') format('woff2'),
+       url('../fonts/DroidNaskh-Regular.woff') format('woff'),
+       url('../fonts/DroidNaskh-Regular.ttf') format('truetype'),
+       url('../fonts/DroidNaskh-Regular.svg#') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
 body{
-    font-family: 'Cairo', sans-serif;
-    color:#fff;
+  font-family: 'DROID ARABIC NASKH', sans-serif;
+  color:#fff;
 }
 .container{
     width:90%;
