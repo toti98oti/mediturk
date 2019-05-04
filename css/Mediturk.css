@@ -739,5 +739,10 @@ footer #goforum {
   text-decoration: none;
   color:lightsalmon;
 }
+#langue{
+  margin:0;
+  padding:6px 2px 4px 6px;
+  align-items: center;
+}
 /*ns69.domaincontrol.com
 ns70.domaincontrol.com*/
